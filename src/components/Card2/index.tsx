@@ -8,14 +8,13 @@ interface Props {
  callback?: (params: string) => void
 }
 
-const Card: React.FC<Props> = (props: Props) => {
-  props.callback && props.callback('我是子组件的参数')
+const Card2: React.FC<Props> = (props: Props) => {
 
-  // 一般不会用这种方式
-  window.addEventListener('on-card-click',(e)=>{
-    console.log('触发了', e.params);
-  })
-
+  const event = new Event('on-card-click') //添加到事件中心
+  const clickCard = () => {
+    event.params = {name: '我是参数'}
+    window.dispatchEvent(event)
+  }
   return (
     <div className='card'>
       <header>
@@ -26,11 +25,18 @@ const Card: React.FC<Props> = (props: Props) => {
         {props.children}
       </main>
       <footer>
-        <button onClick={() => window.onShow()}>确认</button>
+        <button onClick={clickCard}>确认</button>
         <button>取消</button>
       </footer>
     </div>
   )
 }
 
-export default Card
+//扩充event类型
+declare global {
+  interface Event {
+    params: any
+  }
+}
+
+export default Card2

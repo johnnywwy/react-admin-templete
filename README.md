@@ -143,3 +143,6 @@ export default Message;
 ```
 
 在 main.tsx 注入即可使用 import './components/Message/index.tsx'
+
+
+## 3、父子组件传值
