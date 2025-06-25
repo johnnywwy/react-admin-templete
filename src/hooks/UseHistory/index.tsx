@@ -35,4 +35,13 @@ export const useHistory = () => {
   return [url, push, replace] as const;
 };
 
-// const [url, push, replace] = useHistory()
+export const UseHistoryDemo = () => {
+  const [url, push, replace] = useHistory();
+  return (
+    <>
+      <h2>当前url：{url}</h2>
+      <button onClick={() => push("/xxxx")}>push</button>
+      <button onClick={() => replace("/yyyy")}>replace</button>
+    </>
+  );
+};

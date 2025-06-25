@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Card from "../Card";
-import Card2 from "../Card2";
+import Card from "../../component/Card";
+import Card2 from "../../component/Card2";
 
 const fn = (params: string) => {
   console.log("我是父组件的方法", params);
