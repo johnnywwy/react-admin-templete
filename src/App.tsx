@@ -13,6 +13,7 @@ import { UseImperativeHandleDemo } from "./hooks/UseImperativeHandle";
 import { UseContextDemo } from "./hooks/UseContext";
 import { MemoDemo } from "./hooks/Memo";
 import { UseMemoDemo } from "./hooks/UseMemo";
+import { UseCallbackDemo } from "./hooks/UseCallback";
 
 interface Iitem {
   id: string;
@@ -36,8 +37,9 @@ function App() {
       {/* <UseRefDemo /> */}
       {/* <UseImperativeHandleDemo /> */}
       {/* <UseContextDemo /> */}
-      <MemoDemo />
+      {/* <MemoDemo /> */}
       {/* <UseMemoDemo /> */}
+      <UseCallbackDemo />
     </>
   );
 }
