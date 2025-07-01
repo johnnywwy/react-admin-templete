@@ -10,6 +10,7 @@ import { UseStartTransitionDemo } from "./hooks/UseStartTransition";
 import { UseDeferredValueDemo } from "./hooks/UseDeferredValue";
 import { UseRefDemo } from "./hooks/UseRef";
 import { UseImperativeHandleDemo } from "./hooks/UseImperativeHandle";
+import { UseContextDemo } from "./hooks/UseContext";
 
 interface Iitem {
   id: string;
@@ -31,7 +32,8 @@ function App() {
       {/* <UseStartTransitionDemo /> */}
       {/* <UseDeferredValueDemo /> */}
       {/* <UseRefDemo /> */}
-      <UseImperativeHandleDemo />
+      {/* <UseImperativeHandleDemo /> */}
+      <UseContextDemo />
     </>
   );
 }
